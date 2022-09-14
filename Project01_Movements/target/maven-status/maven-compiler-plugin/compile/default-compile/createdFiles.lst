@@ -1,0 +1,5 @@
+com\Project01_Movements\service\MovementsService.class
+com\Project01_Movements\Project01MovementsApplication.class
+com\Project01_Movements\bean\Movements.class
+com\Project01_Movements\repository\MovementsRepository.class
+com\Project01_Movements\controller\MovementsController.class
