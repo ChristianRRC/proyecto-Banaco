@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.Project02.apiGateway.ApiGatewayApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.828 s <<< FAILURE! - in com.Project02.apiGateway.ApiGatewayApplicationTests
-contextLoads  Time elapsed: 0.01 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.IllegalArgumentException: Unable to find RoutePredicateFactory with name Path 
-Caused by: java.lang.IllegalArgumentException: Unable to find RoutePredicateFactory with name Path 
-
