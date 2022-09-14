@@ -1,0 +1,5 @@
+com\Project01_Client\bean\Client.class
+com\Project01_Client\controller\ClientController.class
+com\Project01_Client\repository\ClientRepository.class
+com\Project01_Client\Project01ClientApplication.class
+com\Project01_Client\service\ClientService.class
