@@ -1,0 +1,85 @@
+version: '3'
+
+services:
+  eureka:
+    build:
+      context: ./Eureka
+      dockerfile: Dockerfile
+    image: eureka_app
+    container_name: "eureka"
+    hostname: eureka_app
+    ports:
+      - "8761:8761"
+    depends_on:
+      - mongodb
+    networks:
+      - proyecto_nw
+
+  account:
+    build:
+      context: ./Project01_Acount
+      dockerfile: Dockerfile
+    image: account_app
+    hostname: account_app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+    networks:
+      - proyecto_nw
+
+  client:
+    build:
+      context: ./Project01_Client
+      dockerfile: Dockerfile
+    image: client_app
+    hostname: client_app
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mongodb
+    networks:
+      - proyecto_nw
+
+  credit:
+    build:
+      context: ./Project01_Credit
+      dockerfile: Dockerfile
+    image: credit_app
+    hostname: credit_app
+    ports:
+      - "8083:8083"
+    depends_on:
+      - mongodb
+    networks:
+      - proyecto_nw
+
+  movements:
+    build:
+      context: ./Project01_Movements
+      dockerfile: Dockerfile
+    image: movements_app
+    hostname: movements_app
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mongodb
+    networks:
+      - proyecto_nw
+
+  mongodb:
+    image: mongo:latest
+    container_name: "monguito"
+    hostname: mongodb-host
+    environment:
+      - MONGO_INITDB_DATABASE=baseMongo
+    ports:
+      - "27017:27017"
+    networks:
+      - proyecto_nw
+    volumes:
+      - ./MongoDB:/data/db
+
+networks:
+  proyecto_nw:
+    driver: bridge
