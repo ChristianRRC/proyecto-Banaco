@@ -6,7 +6,7 @@ spring:
   data:
     mongodb:
       database: baseMongo
-      host: monguito
+      host: localhost
       port: 27017
 eureka:
   client:
